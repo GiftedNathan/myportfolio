@@ -1,0 +1,770 @@
+:root{
+    --primary-color-light-pink: #FF0077; /* hsl(332,100%,50%), rgb(255,0,119) */
+    --primary-color-dark-pink: #990047; /* hsl(332,100%,30%), rgb(153,0,71) */
+    /* --primary-color-light-pink: #9c3867;
+    --primary-color-dark-pink: #9c3867;  */
+    --primary-color-dark: #151515; /* hsl(0,0%,8%), rgb(21,21,21) */
+    --primary-color-gray: #EBEBEB;   /* hsl(0,0%,92%), rgb(235,235,235) */
+   
+    --text-colour-dark: #292929;
+    --text-colour-gray: #313131;
+    --text-colour-light: #efffeb;
+    
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+    font-size: 16px;
+    list-style-type: none;
+    scroll-behavior: smooth;
+}
+a{
+    color: unset;
+    text-decoration: none;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    min-height: 650px;
+    padding: 0px 30px;
+    background-image: url(./images/intro-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+}
+.header-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color-dark);
+    opacity: .8;
+}
+.nav-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 30px;
+    background-color: black;
+    color: white;
+    z-index: 1;
+}
+.logo{
+    font-size: 1.2em;
+    font-weight: 300;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.menu{
+    width: 200px;
+    margin-top: 20px;
+    transition: 1s ease all;
+    display: none;
+}
+#checkbox{
+    display: none;
+}
+label{
+    font-size: 2em;
+    margin-right: 20px;
+    color: var(--primary-color-light-pink);
+    cursor: pointer;
+}
+#checkbox:checked ~ .menu{
+    display: block;
+}
+li{
+    font-size: 1.1em;
+    font-weight: 200;
+    text-transform: uppercase;
+    padding: 10px 0px;
+    border-top: 1px solid gray;
+    margin-bottom: 1px solid gray;
+}
+li:hover{
+    padding-left: 5px;
+    transition: .5s ease all;
+}
+.introduction{
+    position: absolute;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+    color: var(--text-colour-light);
+}
+.hello{
+    font-size: 1.2em;
+    letter-spacing: .5em;
+    color: var(--primary-color-dark-pink);
+}
+.my-name{
+    font-size: 3.5em;
+}
+.title{
+    font-size: 1.2em;
+    letter-spacing: 10px;
+    padding: 0px 10px;
+    margin-bottom: 80px;
+}
+.call-to-action-btn{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.default-button{
+    border: 2px solid var(--primary-color-gray);
+    padding: 10px;
+    font-size: 1em;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+.about-me-button{
+    padding: 15px 30px;
+    color: var(--text-colour-light);
+    transition: 1s ease-out all;
+}
+.about-me-button:hover{
+    border: 2px solid var(--primary-color-dark-pink);
+    transition: 1s ease all;
+}
+.social-links{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 60px;
+    color: var(--text-colour-light);
+}
+.fab{
+    font-size: 2em;
+    margin: 0px 15px;
+}
+.fab:hover{
+    color: var(--primary-color-dark-pink);
+}
+
+section{
+    scroll-behavior: smooth;
+}
+
+ /* ..........about section..........  */
+ /* .................................  */
+.about-section{
+    width: 100%;
+    padding: 100px 30px;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+}
+.section-name{
+    font-size: 1.1em;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--primary-color-light-pink);
+}
+.section-title{
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--text-colour-dark);
+    margin-bottom: 30px;
+}
+.about-introduction{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+    
+}
+.profile-image{
+    width: 150px;
+    height: 150px;
+    background-image: url(./images/profile-image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 1px solid var(--text-colour-gray);
+    margin-bottom: 30px;
+}
+.section-text{
+    max-width: 400px;
+    font-size: 1em;
+    text-align: center;
+    color: var(--text-colour-gray);
+    line-height: 1.8em;
+}
+.about-row{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 30px 0px
+}
+.profile, .skills{
+    padding: 0px 20px;
+    max-width: 450px;
+}
+.profile-title{
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--primary-color-dark);
+}
+.profile-text{
+    line-height: 1.8em;
+    margin-bottom: 20px;
+    color: var(--text-colour-gray);
+}
+.profile-item{
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--primary-color-dark);
+    margin-bottom: 20px;
+}
+.profile-item span{
+    display: block;
+    font-weight: 300;
+    text-transform: capitalize;
+    color: var(--text-color-gray);
+}
+.profile-item .profile-email{
+    text-transform: lowercase;
+}
+ /* skills ...  */
+ .skill-content{
+    margin-bottom: 30px;
+ }
+ .skill-name{
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 2em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--primary-color-dark);
+ }
+ .progress-bar{
+     /* height: .5em; */
+     background-color: var(--primary-color-gray);
+     border-radius: 5px;
+ }
+ .progress{
+     width: 70%;
+     height: 95%;
+     font-size: .8em;
+     padding-right: 10px;
+     border-top-left-radius: 5px;
+     border-bottom-left-radius: 5px;
+     background-image: linear-gradient(to right, var(--text-colour-light), var(--primary-color-light-pink));
+     text-align: right;
+}
+.html{ width: 90%;}
+.css{ width: 60%;}
+.js{ width: 40%;}
+.bootstrap{ width: 70%;}
+.wordpress{ width: 60%;}
+.laravel{ width: 40%;}
+
+.call-to-action-btn{
+    width: 100%;
+    margin: 30px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.hire-me-button {
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.hire-me-button:hover {
+    border: 2px solid var(--primary-color-light-pink);
+    transition: 1s ease all;
+}
+.download-cv-button{
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color: var(--primary-color-gray);
+    background-color: var(--text-colour-gray);
+}
+
+
+ /* ..........resume section..........  */
+ /* .................................  */
+.resume-section{
+    width: 100%;
+    padding: 100px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color-gray);
+    /* display: none; */
+}
+.work-experience{
+    width: 100%;
+}
+.work-title{
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--primary-color-light-pink);
+    margin: 40px 0px 60px 0px;
+}
+.job-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.job{
+    text-align: right;
+    padding: 20px 0px;
+    padding-right: 30px;
+    width: 300px;
+}
+.job-title, .discription-title{
+    font-size: 1.2em;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--text-colour-dark);
+}
+.job-date{
+    font-size: .9em;
+    text-transform: capitalize;
+    color: var(--text-colour-gray);
+}
+.discription{
+    max-width: 600px;
+    width: 60%;
+    padding: 20px 30px;
+    border-left: 1px solid black;
+    position: relative;
+}
+.discription .section-text{
+    text-align: left;
+}
+.fa-graduation-cap, .fa-briefcase{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    margin-top: -40px;
+    margin-left: -25px;
+    color: var(--text-colour-light);
+    background-color: var(--primary-color-dark);
+    border-radius: 50%;
+
+}
+
+/* ..........portfolio section..........  */
+/* .................................  */
+.portfolio-section{
+    width: 100%;
+    padding: 100px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* display: none; */
+}
+
+/* ..........blog section..........  */
+/* .................................  */
+.blog-section{
+    width: 100%;
+    padding: 100px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--primary-color-gray);
+    /* display: none; */
+}
+.visit-blog-button{
+    padding: 15px 40px;
+    margin: 30px;
+    color: var(--text-colour-light);
+    background-color: var(--primary-color-dark);
+}
+
+/* ..........services section..........  */
+/* .................................  */
+.services-section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(./images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* position: relative; */
+    /* display: none; */
+}
+.service-section-overlay{
+    width: 100%;
+    height: 100%;
+    padding: 100px 30px;
+    background-color: var(--primary-color-dark);
+    opacity: .9;
+}
+.services-section-content{
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* color: white; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.services-section-content .section-title{
+    color: var(--text-colour-light);
+}
+.services-section-content .section-text{
+    color: var(--text-colour-light);
+}
+.services-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+.service{
+    width: 280px;
+    padding: 30px 20px;
+    margin: 30px 30px;
+    text-align: center;
+    color: var(--text-colour-light);
+    border: 1px solid gray;
+}
+.service .section-title{
+    color: var(--text-colour-light);
+    text-align: center;
+    margin-bottom: 15px;
+}
+.service .section-text{
+    color: var(--text-colour-light);
+    font-size: 1em;
+    font-weight: 300;
+    text-align: center;
+}
+.service .fas{
+    color: var(--primary-color-dark-pink);
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+
+/* ..........acheivement section..........  */
+/* .................................  */
+.achievement-section{
+    width: 100%;
+    /* height: auto; */
+    padding: 60px 30px;
+    background-color: var(--primary-color-dark-pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: var(--text-colour-light);
+}
+.acheivement{
+    width: 200px;
+    padding: 20px 30px;
+    margin: 10px;
+    text-align: center;
+    border-left: 1px solid rgb(153, 88, 99);
+    border-right: 1px solid rgb(153, 88, 99);
+}
+
+.acheivement .fas{
+    font-size: 3em;
+    line-height: 1.5em;
+    /* font-weight: 600; */
+}
+.acheivement-figue{
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--primary-color-dark);
+} 
+.acheivement-text{
+    font-size: 1.1em;
+    text-transform: uppercase;
+}
+
+
+
+/* ..........contact section..........  */
+/* .................................  */
+.contact-section{
+    width: 100%;
+    padding: 80px 30px;
+    background-color: var(--primary-color-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-colour-light);
+}
+.contact-section .section-title, .contact-section .section-text{
+    color: var(--text-colour-light);
+}
+.contact-form{
+    width: 50%;
+    margin: 30px 0px;
+    display: flex;
+    flex-direction: column;
+}
+.contact-form input, .contact-form textarea{
+    width: 100%;
+    height: 45px;
+    margin: 10px 0px;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    font-size: 1.1em;
+    font-weight: 200;
+    color: var(--text-colour-light);
+    background-color: transparent;
+    border-bottom: 1px solid gray;
+}
+.contact-form textarea{
+    height: unset;
+}
+.contact-form input:focus, .contact-form textarea:focus{
+    border-bottom: 1px solid var(--primary-color-dark-pink);
+    transition: .5s ease-in all;
+}
+.contact-form input::placeholder, .contact-form textarea::placeholder{
+   color: var(--primary-color-gray);
+   text-transform: capitalize;
+}
+
+.form-buttton{
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    color: var(--primary-color-gray);
+    background-color: var(--primary-color-dark-pink);
+}
+.form-buttton:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: .5s ease-in all;
+}
+
+/* ..........footer section..........  */
+/* .................................  */
+.footer-section{
+    width: 100%;
+    padding: 30px 30px;
+    background-color: var(--primary-color-dark);
+    
+}
+.footer-container{
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--text-colour-light);
+}
+.footer-item{
+    width: 250px;
+    text-align: center;
+    margin: 30px 10px;
+}
+.footer-item .fas{
+    font-size: 3em;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+}
+.footer-title{
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 2.5em;
+    text-transform: uppercase;
+    color: var(--primary-color-dark-pink);
+}
+.footer-text{
+    font-size: .9em;
+    font-weight: 300;
+    line-height: 2.5em;
+    text-transform: capitalize;
+    color: var(--primary-color-gray);
+}
+.footer-email{
+    text-transform: lowercase;
+}
+.footer-social-links{
+    font-size: .8em;
+    text-align: center;
+    color: var(--primary-color-gray);
+    margin: 100px 0px;
+}
+.copy-right{
+    margin-top: 30px;
+    padding: 10px;
+    border-top: .5px solid var(--primary-color-dark-pink);
+    text-align: center;
+    font-size: .9em;
+    font-weight: 200;
+    color: var(--text-colour-light);
+}
+
+
+
+
+/* .......... media queries .......  */
+/* .......... media queries .......  */
+/* .......... media queries .......  */
+
+/* .......... tablet devices .......  */
+/* .......... tablet devices  .......  */
+@media (max-width: 768px){
+    .my-name{
+        font-size: 3em;
+    }
+    .section-title{
+        font-size: 1.5em;
+    }
+    .call-to-action-btn{
+        padding: 0px 0px;
+    }
+    .about-row{
+        width: 80%;
+        flex-direction: column;
+        padding: 40px 0px
+    }
+    .profile, .skills{
+        width: 100%;
+        padding: 0px 0px;
+    }
+    .job-container{
+        width: 100%;
+        flex-direction: column;
+        margin-left: 20px;
+    }
+    .job{
+        width: 100%; 
+        padding: 0px 30px;
+        padding-left: 40px;
+        text-align: left;
+        border-left: 1px solid black;
+        position: relative;
+        
+    }
+    .discription{
+        width: 100%;
+        max-width: unset;
+        padding-left: 40px;
+    }
+    .job::after{
+        position: absolute;
+        content: '';
+        width: 66px;
+        height: 5px;
+        left: 10;
+        top: 0;
+        margin-top: 65px;
+        border-bottom: 1px solid var(--primary-color-light-pink)
+    }
+    .discription-title{
+        margin: 15px 0px 5px 0px;
+    }
+    .discription .fas{
+        display: none;
+    }
+    .fa-graduation-cap, .fa-briefcase{
+        margin-top: -30px;
+    }
+    .contact-form{
+        width: 60%;
+    }
+    .footer-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+
+/* .......... phone devices .......  */
+/* .......... phone devices  .......  */
+@media (max-width: 425px){
+    .my-name{
+        font-size: 3em;
+    }
+    .title{
+        font-size: 1.2em;
+        letter-spacing: 5px;
+    }
+    .section-text{
+        text-align: unset;
+    }
+    .about-row{
+        width: 100%;
+    }
+    .job{
+        padding-left: 30px;
+        
+    }
+    .discription{
+        padding-left: 30px;
+    }
+    .acheivement{
+        margin-bottom: 5px;
+        border-left: unset;
+        border-right: unset;
+        border-top: 1px solid rgb(153, 88, 99);
+        border-bottom: 1px solid rgb(153, 88, 99);
+        /* border-right: 1px solid black; */
+    }
+    .contact-form{
+        width: 90%;
+    }
+
+}
+
+/* .......... smaller phone devices .......  */
+/* .......... smaller phone devices  .......  */
+@media (max-width: 320px){
+    .my-name{
+        font-size: 2em;
+    }
+    .title{
+        font-size: 1.1em;
+        letter-spacing: 2px;
+    }
+    .fab{
+        font-size: 1.5em;
+    }
+    .contact-form{
+        width: 100%;
+    }
+
+
+
+
+
+}
